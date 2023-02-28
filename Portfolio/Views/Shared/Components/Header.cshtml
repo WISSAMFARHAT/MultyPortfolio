@@ -1,0 +1,41 @@
+﻿@{
+    string currentPath = ViewData["CurrentPath"].ToString();
+    string option = ViewData["option"] as string;
+}
+
+@if (string.IsNullOrEmpty(currentPath))
+{
+    <header>
+        <div class="header">
+            <div class="header-logo fadein ">
+                <partial name="Assets/Logo" />
+            </div>
+        </div>
+    </header>
+}
+else
+{
+    <header>
+        <div class="header">
+            <div class="header-logo fade-left _logo">
+                @if (option!.Equals("marketing", StringComparison.OrdinalIgnoreCase))
+                {
+                    <partial name="Assets/Dana" />
+                }
+                else if (option!.Equals("graphic-design", StringComparison.OrdinalIgnoreCase))
+                {
+                    <img src="./img/graphic/walidlogo.png" alt="walid logo" />
+                }
+            </div>
+            <ul class="header-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
+                @if (!option!.Equals("marketing", StringComparison.OrdinalIgnoreCase))
+                {
+                    <li><a href="#portfolio">Portfolio</a></li>
+                }
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+}

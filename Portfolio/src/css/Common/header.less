@@ -1,0 +1,102 @@
+﻿@import "variable.less";
+
+header {
+    background-color: var(--headerbgColor);
+    padding: 20px;
+    height: var(--header) !important;
+    transition: all var(--duration);
+    box-shadow: 0 0 2px var(--shadow);
+
+
+    .header {
+        display: flex;
+        justify-content: var(--justified-content);
+        align-items: center;
+        width: 100%;
+
+        &-logo {
+            svg {
+                width: 60px;
+
+                .--svg-fill {
+                    fill: var(--whiteColor);
+                }
+
+                .--svg-fill1 {
+                    fill: var(--secondaryColor);
+                }
+
+                .--svg-fill2 {
+                    fill: var(--primaryColor);
+                }
+            }
+
+            span {
+                font-size: 1.5rem;
+                color: var(--blackColor);
+                font-weight: bold;
+            }
+            &._logo{
+                svg{
+                    width:100px;
+                }
+            }
+            img{
+                width:60px;
+            }
+        }
+
+        &-menu {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            list-style: none;
+
+            li {
+                height: 100%;
+                width: fit-content;
+                position: relative;
+
+                a {
+                    position: relative;
+                    color: var(--blackColor);
+                    font-weight: bold;
+                    font-size: 1rem;
+                    padding: 10px;
+                    text-transform: capitalize;
+                    text-decoration: none;
+                    transition: all var(--duration);
+
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        left: 50%;
+                        bottom: 0;
+                        transform: translateX(-50%);
+                        height: 3px;
+                        width: 0;
+                        background-color: var(--secondaryColor);
+                        transition: all var(--duration);
+                    }
+
+                    &:hover {
+                        color: var(--primaryColor);
+
+                        &:after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+._scroll {
+    header {
+        --headerbgColor: var(--bagheaderscroll);
+        --shadow: var(--bagheaderscroll);
+        box-shadow: 0 0 2px var(--shadow);
+        height: 80px !important;
+    }
+}

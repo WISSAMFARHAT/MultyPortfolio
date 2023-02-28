@@ -1,0 +1,47 @@
+{
+	"builds": [
+		{
+			"name": "dev",
+			"js": {
+				"declaration": false,
+				"webClean": true
+			}
+		}
+	],
+	"files": [
+		{
+			"output": "wwwroot/css/site.css",
+			"input": "src/css/site.less"
+		},
+		{
+			"output": "wwwroot/css/index.css",
+			"input": "src/css/index.less"
+		},
+		{
+			"output": "wwwroot/css/marketing.css",
+			"input": "src/css/marketing.less"
+		},
+		{
+			"output": "wwwroot/css/graphic.css",
+			"input": "src/css/graphic.less"
+		},
+		{
+			"output": "wwwroot/js/particles.js",
+			"input": "src/js/particles.js"
+		},
+		{
+			"output": "wwwroot/js/typewriter.js",
+			"input": "src/js/typewriter.js"
+		},
+		{
+			"output": "wwwroot/js/site.js",
+			"input": [ "src/js/site.ts", "src/js/animation.ts" ]
+		}
+	],
+	"images": [
+		{
+			"output": "wwwroot/img",
+			"input": "src/img/**"
+		}
+	]
+}

@@ -1,0 +1,13 @@
+﻿@{
+    string option = ViewData["option"] as string;
+}
+
+@if (option!.Equals("marketing",StringComparison.OrdinalIgnoreCase))
+{
+    <partial name="Marketing" />
+}
+else if (option!.Equals("graphic-design", StringComparison.OrdinalIgnoreCase))
+{
+    <partial name="Graphics" />
+}
+
